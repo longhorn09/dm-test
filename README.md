@@ -31,6 +31,8 @@ A simple Discord chatbot built with Discord.js v14 that captures and logs direct
    ```
    DISCORD_TOKEN=your_actual_bot_token_here
    ```
+   
+   **⚠️ Important:** The `DISCORD_TOKEN=` must be set in your `.env` file, or authentication to Discord will fail upon client startup. The bot will exit with an error if this environment variable is missing or empty.
 
 4. **Configure Bot Permissions:**
    - In the Discord Developer Portal, go to OAuth2 > URL Generator
@@ -77,9 +79,3 @@ To add your own logic for processing DMs, edit the `events/messageCreate.js` fil
 - Sends a simple acknowledgment reply
 
 You can modify the `execute` function to add your custom processing logic.
-
-## Troubleshooting
-
-- **"DISCORD_TOKEN is not set"**: Make sure you've created a `.env` file with your bot token
-- **"Failed to login"**: Check that your bot token is correct and the bot has proper permissions
-- **Bot not responding**: Ensure the bot has the necessary intents enabled in the Discord Developer Portal 
