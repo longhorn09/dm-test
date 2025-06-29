@@ -2,13 +2,14 @@
 
 A simple Discord chatbot built with Discord.js v14 that captures and logs direct messages (DMs).
 
-## Features
+## Purpose
 
-- Captures direct messages sent to the bot
-- Logs message details to console (sender, content, timestamp)
-- Responds to DMs with a test message
-- Uses modern ES modules
-- Event-driven architecture with separate event handlers
+This was just to isolate an issue with capturing direct messages
+This was ultimately determined to be related to the `Partials` and 
+
+```javascript
+partials: [Partials.Channel, Partials.Message],
+```
 
 ## Setup
 
@@ -77,9 +78,3 @@ To add your own logic for processing DMs, edit the `events/messageCreate.js` fil
 - Sends a simple acknowledgment reply
 
 You can modify the `execute` function to add your custom processing logic.
-
-## Troubleshooting
-
-- **"DISCORD_TOKEN is not set"**: Make sure you've created a `.env` file with your bot token
-- **"Failed to login"**: Check that your bot token is correct and the bot has proper permissions
-- **Bot not responding**: Ensure the bot has the necessary intents enabled in the Discord Developer Portal 
