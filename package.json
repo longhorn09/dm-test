@@ -1,0 +1,18 @@
+{
+  "name": "dm-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Norman Tang",
+  "license": "ISC",
+  "description": "Discord chatbot for testing direct messages",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1"
+  },
+  "type": "module"
+}
